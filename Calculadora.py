@@ -1,7 +1,7 @@
 import tkinter as tk
 ventana = tk.Tk()
 ventana.title("Calculadora")
-ventana.geometry("300x300")
+ventana.geometry("350x350")
 etiqueta = tk.Label(ventana, text="Escribe los números:")
 etiqueta.pack(pady=5)
 entrada1 = tk.Entry(ventana)
@@ -48,12 +48,21 @@ def dividir():
         resultado.config(text=f"Error: ingrese números válidos.")
 
 def limpiar():
-    try:
         entrada1.delete(0, tk.END)
         entrada2.delete(0, tk.END)
-    resultado.config(text=f"Resultado: ")
+        resultado.config(text="Resultado: ")
 
-
-
+boton_sumar = tk.Button(ventana, text="+", command=sumar)
+boton_sumar.pack(pady=5)
+boton_restar = tk.Button(ventana, text="-", command=restar)
+boton_restar.pack(pady=5)
+boton_multiplicar = tk.Button(ventana, text="*", command=multiplicar)
+boton_multiplicar.pack(pady=5)
+boton_dividir = tk.Button(ventana, text="/", command=dividir)
+boton_dividir.pack(pady=5)
+boton_limpiar = tk.Button(ventana, text="AC", command=limpiar)
+boton_limpiar.pack(pady=5)
+boton_salir = tk.Button(ventana, text="Salir", command=exit)
+boton_salir.pack(pady=5)
 
 ventana.mainloop()
