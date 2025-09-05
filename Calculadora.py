@@ -1,7 +1,7 @@
 import tkinter as tk
 ventana = tk.Tk()
 ventana.title("Calculadora")
-ventana.geometry("300x200")
+ventana.geometry("300x250")
 ventana.configure(bg="#B0C4DE") #color de fondo de interfaz
 etiqueta = tk.Label(ventana, text="Escribe los números:", font=("Helvetica", 12, "bold"), fg="#2F4F4F")
 etiqueta.pack(pady=5)
